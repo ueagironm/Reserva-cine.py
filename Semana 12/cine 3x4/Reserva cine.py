@@ -1,17 +1,9 @@
 """
-Iteración sobre arreglos
-multidimensionales utilizando bucles
-anidados.
-Arreglos N-Dimensionales
-Reserva de asiento para
-servidor policial Richard Giron en una sala de cine
-de 3 filas por 4 columnas (12 asientos en
-total).
+Sistema de Reserva de Asientos — Sala de Reuniones
 Estado de cada asiento:
 0 = asiento libre
 1 = asiento reservado
 """
-
 # Dimensiones de la sala
 NUM_FILAS = 3
 NUM_COLUMNAS = 4
@@ -23,7 +15,7 @@ for i in range(NUM_FILAS):
     fila_vacia = [0] * NUM_COLUMNAS
     asientos.append(fila_vacia)
 
-print("=== Sistema de reserva de asientos - Sala de personal policial ===")
+print("=== Sistema de reserva de asientos - Sala de Reuniones ===")
 print(f"La sala tiene {NUM_FILAS} filas (0 a {NUM_FILAS - 1}) "
       f"y {NUM_COLUMNAS} columnas (0 a {NUM_COLUMNAS - 1}).\n")
 
@@ -31,7 +23,7 @@ print(f"La sala tiene {NUM_FILAS} filas (0 a {NUM_FILAS - 1}) "
 fila = int(input(f"Ingrese fila del oficial (0 a {NUM_FILAS - 1}): "))
 columna = int(input(f"Ingrese columna del oficial (0 a {NUM_COLUMNAS - 1}): "))
 
-# Validación de rango (mejora opcional sugerida en la guía de la tarea)
+# Validación de rango for fila y columna)
 if 0 <= fila < NUM_FILAS and 0 <= columna < NUM_COLUMNAS:
     # 3. Marcar el asiento como reservado
     if asientos[fila][columna] == 1:
